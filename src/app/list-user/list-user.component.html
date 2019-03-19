@@ -1,0 +1,25 @@
+<div>
+  
+  <h2 style="color: red; text-align: center"> User Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <!-- <th class="hidden">Id</th> -->
+        <th>UserName</th>
+        <th>Mobile number</th>
+        <th>Email</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <!-- <td class="hidden"> {{ user.userId }} </td> -->
+        <td> {{ user.username }} </td>
+        <td> {{ user.mobileNo }} </td>
+        <td> {{ user.email }} </td>
+        <td><button class="btn btn-danger" (click)="deleteUser(user.userId)"> Delete User</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
